@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+
+
+        <div class="row">
+            <div id="content" class="col-9">
+                
+               
+                
+                  
+      {% for post in site.posts %}
+                 <div class="clear">
+                  <h3 class="uppercase float-left">   <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a></h3></div>
+                 {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                <span class="float-right">{{ post.date | date: date_format }}</span>
+
+       <hr class="clear">
+               {{ post.content }}
+
+
+
+            {% endfor %}
+  
+   
+            </div>
+            <div class="col-3">
+                <h3>標籤</h3>
+                <hr>
+                <ul>
+                    <li>
+                        <a href="http://opensource.org/licenses/MIT">精華</a>
+                    </li>
+                    <li>
+                        <a href="http://imgfill.com">詳細</a>
+                    </li>
+                </ul>
+
+                <h3>年份</h3>
+                <hr>
+                <ul>
+                    <li>
+                        <a href="http://opensource.org/licenses/MIT">2017</a>
+                    </li>
+                    <li>
+                        <a href="http://imgfill.com">2016</a>
+                    </li>
+                    <li>
+                        <a href="http://vanillaphp.com">2015</a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+            <!-- col-8 -->
+        </div>
+
+<!--
+<div class="home">
+  {% if page.title %}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {% endif %}
+
+  {{ content }}
+
+  {% if site.posts.size > 0 %}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li>
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {% if site.show_excerpts %}
+          {{ post.excerpt }}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {% endif %}
+
+</div>-->

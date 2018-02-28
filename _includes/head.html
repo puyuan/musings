@@ -1,0 +1,38 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ "/assets/minimal.css" | relative_url }}">
+  {% feed_meta %}
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+    
+   <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+        .uppercase {
+
+            text-transform: capitalize;
+            font-weight: bold;
+
+        }
+
+        .clear {
+            clear: both;
+        }
+
+
+
+
+        body,
+        p,
+        h3 {
+
+            font-family: 'cwTeXHei', sans-serif;
+        }
+
+        .opaque {
+            opacity: 0.3;
+        }
+    </style>    
+</head>
