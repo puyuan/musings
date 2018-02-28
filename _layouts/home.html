@@ -12,9 +12,9 @@ layout: default
                   
       {% for post in site.posts %}
                  <div class="clear">
-                  <h3 class="uppercase float-left">   <a class="post-link" href="{{ post.url | relative_url }}">
+                  <h3 class="uppercase float-left"> 
             {{ post.title | escape }}
-          </a></h3></div>
+       </h3></div>
                  {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
                 <span class="float-right">{{ post.date | date: date_format }}</span>
 
