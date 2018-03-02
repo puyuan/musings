@@ -1,16 +1,13 @@
 <header>
-    <a class="logo" href="http://minimalcss.com">{{ site.title | escape }}</a>
-    <nav class="float-right">
-        <ul>
-            <li>
-                <a href="#">關於</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="row">
+        <div class="column">
+            <h1>{{ site.title | escape }}</h1>
+        </div>
+    </div>
 </header>
 
 <div class="row">
-    <div class="col-12">
+    <div class="column">
         <img class="center opaque" width=728 src={{ "/assets/logo.jpg" | relative_url }}>
     </div>
 </div>
